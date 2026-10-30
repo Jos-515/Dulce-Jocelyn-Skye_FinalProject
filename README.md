@@ -12,7 +12,10 @@ software tools or libraries did you use?)
 (What works well? What challenges did you face? What might you change
 if you had more time?)
 
-## Credit any third-party resources (e.g. code, data) you used and state which
-aspects of the project are your own work.
+## Credit any third-party resources (e.g. code, data) you used and state which aspects of the project are your own work.
+
+Research Materials:
+
+https://www.red3d.com/cwr/boids/ 
 
 ## Provide instructions for compiling and running your project.
