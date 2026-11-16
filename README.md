@@ -5,8 +5,8 @@
 the audience to experience?)
 
 ## Describe how you implemented the project.
-(What generative techniques have you used, and why? What other
-software tools or libraries did you use?)
+We decided to use different techniques that we learn during the course and use them for a specific element in our project. 
+For the algae and crabs decoration we implemented W4-randomness and noise, for the water background we used W5- Randomness and noise, lastly for the fish we decided to use W6- Autonomous agents.
 
 ## How successful was your project in meeting your creative aims.
 (What works well? What challenges did you face? What might you change
