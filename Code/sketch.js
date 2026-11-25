@@ -1,3 +1,9 @@
+/*
+DM3008 Generative Art
+Digital Aquarium
+Inspired by Week 4 - Waves & Distribution, Week 5 - Randomness and Noise, and Week 6 - Autonomous Agents
+By Dulce, Jocelyn and Skye
+*/
 
 let noiseScale = 0.003;
 let time = 0;
@@ -23,6 +29,8 @@ function preload() {
   fishImg = loadImage('fish.png', () => {}, () => {
     console.log("fish.png not found, using procedural fallback if needed.");
   });
+
+  // This function loads the image of the fish, and if it cannot be found then it returns a message to the console. Helping with debugging.
 }
 
 function centreCanvas() {
@@ -77,6 +85,8 @@ function setup() {
     color(140, 155, 130),  
     color(150, 95, 145)    
   ];
+
+  // These arrays hold the colors for the seaweed, coral, and algae in the aquarium. 
 }
 
 function draw() {
@@ -94,6 +104,8 @@ function draw() {
   }
 
   flock.run(foodList);
+
+  // Each function is called seperately so that they can be layered and edited without affecting each other.
 }
 
 function updateAndRenderFlowField() {
@@ -123,6 +135,7 @@ function updateAndRenderFlowField() {
     }
   }
   time += 0.003;
+  // This function is for the perlin noise water background. It sets the background to a dark shade of blue. Then on top particles in a lighter colour are drawn with a random position. These move based on the perlin noise to create a flowing effect. 
 }
 
 function renderUnderwaterGarden() {
@@ -305,12 +318,16 @@ function renderUnderwaterGarden() {
   }
 
   noStroke();
+
+  // This functions creates the underwater garden; it draws the sand at the bottom of the aquarium, then draws bubbles, seaweed, coral, and algae. The seaweed and algae sway in a wave-like motion using sine functions, while the coral is drawn with a fan-like shape using ellipses. The colors for these elements are chosen from predefined color arrays to create a visually appealing underwater scene. 
 }
 
 function mousePressed() {
   if (mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= 565) {
     foodList.push(createVector(mouseX, mouseY));
   }
+
+  // This function adds the user interaction. When the user clicks within the aquarium, a food particle is added at the mouse position. The food particles are stored in an array and are drawn as small ellipses on the canvas. The fish instantly move towards the food particles, and when they reach them, the food particle is removed from the array. Enabling the user to feel as if they are feeding them.  
 }
 
 function Flock() {
